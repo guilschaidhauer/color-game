@@ -11,7 +11,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
+    var allColors: [UIColor] = [UIColor]()
+    var selectedColors: [UIColor] = [UIColor]()
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -24,6 +26,22 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        intializeColors()
+    }
+    
+    func intializeColors() {
+        allColors.append(UIColor(red: 255/255, green: 100/255, blue: 97/255, alpha: 1))
+        allColors.append(UIColor(red: 88/255, green: 80/255, blue: 141/255, alpha: 1))
+        allColors.append(UIColor(red: 255/255, green: 166/255, blue: 0/255, alpha: 1))
+        allColors.append(UIColor(red: 0/255, green: 63/255, blue: 92/255, alpha: 1))
+        allColors.append(UIColor(red: 188/255, green: 80/255, blue: 145/255, alpha: 1))
+        
+        for i in 0...2 {
+            let colorIndex = Int.random(in: 0..<allColors.count)
+            selectedColors.append(allColors[colorIndex])
+            allColors.remove(at: colorIndex)
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

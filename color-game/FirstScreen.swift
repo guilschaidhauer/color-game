@@ -8,13 +8,22 @@
 import UIKit
 
 class FirstScreen: UIViewController {
-
+    
     let nextButtonCreator = NextButtonCreator()
     let nextButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 255/255, green: 100/255, blue: 97/255, alpha: 1)
+        
+        // getting access to the window object from SceneDelegate
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+        let sceneDelegate = windowScene.delegate as? SceneDelegate
+        else {
+            return
+        }
+        
+        view.backgroundColor = sceneDelegate.selectedColors[0]
+        
         setupButton()
     }
     
