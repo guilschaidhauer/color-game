@@ -7,13 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FirstScreen: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor(red: 255/255, green: 100/255, blue: 97/255, alpha: 1)
     }
-
-
 }
 
