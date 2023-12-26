@@ -7,23 +7,17 @@
 
 import UIKit
 
-class FirstScreen: UIViewController {
+class FirstScreen: BasicScreen {
     
     let nextButtonCreator = NextButtonCreator()
     let nextButton = UIButton()
     
+    override init(screenindex: Int) {
+        super.init(screenindex: screenindex)
+    }
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // getting access to the window object from SceneDelegate
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-        let sceneDelegate = windowScene.delegate as? SceneDelegate
-        else {
-            return
-        }
-        
-        view.backgroundColor = sceneDelegate.selectedColors[0]
-        
+        super.viewDidLoad()        
         setupButton()
     }
     
@@ -34,7 +28,7 @@ class FirstScreen: UIViewController {
     }
         
     @objc func goToNextScreen() {
-        let nextScreen = SecondScreen()
+        let nextScreen = SecondScreen(screenindex: 1)
         navigationController?.pushViewController(nextScreen, animated: true)
     }
 }

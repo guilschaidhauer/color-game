@@ -7,18 +7,9 @@
 
 import UIKit
 
-class ThirdScreen: UIViewController {
+class ThirdScreen: BasicScreen {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // getting access to the window object from SceneDelegate
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-        let sceneDelegate = windowScene.delegate as? SceneDelegate
-        else {
-            return
-        }
-        
-        view.backgroundColor = sceneDelegate.selectedColors[2]
     }
 }

@@ -18,6 +18,7 @@
 		50CB84252B3B2EF00099E5EA /* SecondScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB84242B3B2EF00099E5EA /* SecondScreen.swift */; };
 		50CB84272B3B53F40099E5EA /* ThirdScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB84262B3B53F40099E5EA /* ThirdScreen.swift */; };
 		50CB842B2B3B574A0099E5EA /* NextButtonCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB842A2B3B574A0099E5EA /* NextButtonCreator.swift */; };
+		50CB842F2B3B69150099E5EA /* BasicScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CB842E2B3B69150099E5EA /* BasicScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		50CB84242B3B2EF00099E5EA /* SecondScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreen.swift; sourceTree = "<group>"; };
 		50CB84262B3B53F40099E5EA /* ThirdScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdScreen.swift; sourceTree = "<group>"; };
 		50CB842A2B3B574A0099E5EA /* NextButtonCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButtonCreator.swift; sourceTree = "<group>"; };
+		50CB842E2B3B69150099E5EA /* BasicScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				50CB84242B3B2EF00099E5EA /* SecondScreen.swift */,
 				50CB84262B3B53F40099E5EA /* ThirdScreen.swift */,
 				50CB842A2B3B574A0099E5EA /* NextButtonCreator.swift */,
+				50CB842E2B3B69150099E5EA /* BasicScreen.swift */,
 			);
 			path = "color-game";
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			files = (
 				50CA4F5B2B3B28DA00B03324 /* FirstScreen.swift in Sources */,
 				50CB84252B3B2EF00099E5EA /* SecondScreen.swift in Sources */,
+				50CB842F2B3B69150099E5EA /* BasicScreen.swift in Sources */,
 				50CB84272B3B53F40099E5EA /* ThirdScreen.swift in Sources */,
 				50CB842B2B3B574A0099E5EA /* NextButtonCreator.swift in Sources */,
 				50CA4F572B3B28DA00B03324 /* AppDelegate.swift in Sources */,

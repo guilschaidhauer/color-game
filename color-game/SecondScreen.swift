@@ -7,23 +7,13 @@
 
 import UIKit
 
-class SecondScreen: UIViewController {
+class SecondScreen: BasicScreen {
 
     let nextButtonCreator = NextButtonCreator()
     let nextButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // getting access to the window object from SceneDelegate
-        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-        let sceneDelegate = windowScene.delegate as? SceneDelegate
-        else {
-            return
-        }
-        
-        view.backgroundColor = sceneDelegate.selectedColors[1]
-
         setupButton()
     }
     
@@ -34,7 +24,7 @@ class SecondScreen: UIViewController {
     }
         
     @objc func goToNextScreen() {
-        let nextScreen = ThirdScreen()
+        let nextScreen = ThirdScreen(screenindex: 2)
         navigationController?.pushViewController(nextScreen, animated: true)
     }
 }
